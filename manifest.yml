@@ -1,0 +1,24 @@
+modules:
+  jira:issuePanel:
+    - key: forge-hello-world-app-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Forge app for Oleksandr
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/7bf94d5a-2b3d-472a-a169-95cbf8c5f896
+permissions:
+  scopes:
+    - read:jira-work
