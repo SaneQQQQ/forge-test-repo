@@ -5,6 +5,8 @@ import { invoke, requestJira } from '@forge/bridge';
 const App = () => {
   const [data, setData] = useState(null);
   const context = useProductContext();
+
+
   const [comments, setComments] = useState();
   const fetchCommentsForIssue = async () => {
       const issueId = context?.extension.issue.id;
