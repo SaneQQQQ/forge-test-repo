@@ -8,9 +8,6 @@ const App = () => {
   const [comments, setComments] = useState();
 
 
-
-
-
   const fetchCommentsForIssue = async () => {
       const issueId = context?.extension.issue.id;
       const res = await requestJira(`/rest/api/3/issue/${issueId}/comment`);
