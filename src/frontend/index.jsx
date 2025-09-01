@@ -17,6 +17,11 @@ const App = () => {
       return resData.comments;
     };
 
+
+
+
+
+
   useEffect(() => {
     invoke('getText', { example: 'my-invoke-variable' }).then(setData);
 
