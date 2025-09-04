@@ -19,6 +19,10 @@ const App = () => {
       const res = await requestJira(`/rest/api/3/issue/${issueId}/comment`);
       const resData = await res.json();
       return resData.comments;
+
+
+
+
     };
 
 
