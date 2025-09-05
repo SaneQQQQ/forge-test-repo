@@ -38,9 +38,6 @@ const App = () => {
   useEffect(() => {
     invoke('getText', { example: 'my-invoke-variable' }).then(setData);
 
-
-
-
     if (context) {
         const issueId = context.extension.issue.id;
         fetchCommentsForIssue().then(setComments);
